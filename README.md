@@ -1,6 +1,6 @@
 # Converter
 
-In this project I wrote class with two methods. First method is converting database file to csv file. And second method is reading data from csv file and converting to database file. I putted two converting files. One of them converts data to SQLITE3 and another one converts data to Oracle database server. They have small differences, on the contrary there are more similarities.
+In this project I wrote class with two methods. First method is converting database file to csv file. And second method is reading data from csv file and converting to database file. I putted two converting files. One of them converts data to SQLITE3([converter to sqlite](https://github.com/nurbolatkz/Converter/blob/main/converter_to_sqlite3.py)) and another one converts data to Oracle database( [converter to oracle](https://github.com/nurbolatkz/Converter/blob/main/converter.py))server. They have small differences, on the contrary there are more similarities. 
 
 
 ## Getting started
@@ -12,10 +12,16 @@ Let's firsty descripe script which converts data to <b> Oracle database server</
 `
 import csv, cx_Oracle, datetime
 `
+For converting to sqlite3 
+`import sqlite3, csv`
 
 ## Create connection 
 
+<b>For Oracle :</b>
 `conn = cx_Oracle.connect("User_name/password@//localhost:1521/xe") `
+
+<b>For sqlite3 :</b>
+`conn = sqlite3.connect('yourdbfile.db')`
 
 You can see connections details in Oracle sql developer.
 
