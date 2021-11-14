@@ -1,12 +1,6 @@
-
 import csv
 import cx_Oracle
 import datetime
-
-
-conn = cx_Oracle.connect("User2/oracle@//localhost:1521/xe")
-print(conn.version)
-
 
 
 class Converter:
@@ -124,10 +118,16 @@ class Converter:
                                         
                                         csv_writer.writerow(list(each)[:-1])
                     print("Converted sql to csv :)") 
+                    
 
 newConverter =  Converter()
-newConverter.convert_csv_to_sql(conn, "indexInfo.csv")
-newConverter.convert_csv_to_sql(conn, "indexData.csv")
-newConverter.convert_csv_to_sql(conn, "indexProcessed.csv")
+
+conn = cx_Oracle.connect("User2/oracle@//localhost:1521/xe")
+print(conn.version)
+
+newConverter.convert_csv_to_sql(conn, "mInfo.csv")
+newConverter.convert_csv_to_sql(conn, "mydata.csv")
+newConverter.convert_csv_to_sql(conn, "myprocess.csv")
+
 print("Finished")
                     
