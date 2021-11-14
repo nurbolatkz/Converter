@@ -9,11 +9,11 @@ Let's firsty descripe script which converts data to <b> Oracle database server</
 
 # First install modules and import them
 
-`import csv
-
+`
+import csv
 import cx_Oracle
-
-import datetime`
+import datetime
+`
 
 ## Create connection 
 
