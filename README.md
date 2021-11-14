@@ -31,7 +31,7 @@ Class converter contains two main methods and one additional method.
 
 `def convert_csv_to_sql(self, conn, csv_file)` ->  this method will convert data from csv to sql.
 
-How this method works:
+<b>How this method works: </b>
 
 1. Read data from csv file and save it as list.
 2. Find table name(for table name I used basename of file.)
@@ -43,7 +43,7 @@ How this method works:
 
 `def converter_to_csv(self, conn, csv_name)` - > this method will convert data from sql tables to csv file.
 
-How this method works:
+<b>How this method works: </b>
 
 1. Find table name (I find table as `SELECT table_name FROM user_tables`)
 2. Find column names
